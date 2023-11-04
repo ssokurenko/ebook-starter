@@ -1,0 +1,27 @@
+{
+  "name": "ebook-starter",
+  "version": "1.0.0",
+  "description": "E-book starter powered by Pandoc",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run delete && npm run build:epub && npm run build:pdf",
+    "build:epub": "pandoc source.md -o books/ebook.epub",
+    "build:pdf": "pandoc source.md -o books/ebook.pdf",
+    "delete": "rm -f ./books/ebook.epub && rm -f ./books/ebook.pdf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssokurenko/ebook-starter.git"
+  },
+  "keywords": [
+    "ebook",
+    "pandoc",
+    "starter"
+  ],
+  "author": "Sergii Sokurenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ssokurenko/ebook-starter/issues"
+  },
+  "homepage": "https://github.com/ssokurenko/ebook-starter#readme"
+}
